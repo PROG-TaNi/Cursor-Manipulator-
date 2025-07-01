@@ -4,11 +4,7 @@ An advanced Human-Computer Interaction system that lets you control mouse operat
 
 ---
 
-## 📽️ Demo
 
-https://user-images.githubusercontent.com/your-gif-or-video-demo-link.mp4
-
-> *Shows mouse control, click gestures, drag mode, MCQ selection, and voice typing in action.*
 
 ---
 
