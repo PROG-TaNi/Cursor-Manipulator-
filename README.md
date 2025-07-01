@@ -1,94 +1,98 @@
-🖐️ Hand Gesture & Voice Controlled Interface
-A real-time hand gesture and speech recognition-based interface system built with MediaPipe, OpenCV, PyAutoGUI, and SpeechRecognition. This system lets users control their computer through gestures (mouse movement, left/right clicks, drag), switch to MCQ mode, and type using their voice when crossing their hands.
+# 🖐️ Gesture and Voice-Controlled Interface
 
-🎯 Features
-✅ Real-time mouse control using right-hand index finger
+An advanced Human-Computer Interaction system that lets you control mouse operations, type using your voice, and interact with multiple-choice questions using **hand gestures**. Built using **MediaPipe**, **OpenCV**, and **PyAutoGUI**, this project leverages real-time video and audio processing to offer a touch-free interface for accessibility, presentations, or futuristic applications.
 
-🖱️ Gesture-based left & right mouse clicks
+---
 
-✊ Drag mode using three raised fingers on the left hand
+## 📽️ Demo
 
-🔈 Voice typing when both wrists cross
+https://user-images.githubusercontent.com/your-gif-or-video-demo-link.mp4
 
-🧠 MCQ mode for recognizing raised fingers and selecting options (A/B/C/D)
+> *Shows mouse control, click gestures, drag mode, MCQ selection, and voice typing in action.*
 
-🧵 Multithreaded voice recognition to prevent UI freeze
+---
 
-🧠 Technologies Used
-Library	Purpose
-OpenCV	Video capture and GUI display
-MediaPipe	Real-time hand landmark detection
-PyAutoGUI	Simulating keyboard and mouse
-SpeechRecognition	Voice-to-text input
-NumPy	Mathematical operations
-Threading	Handling voice typing concurrently
+## 🚀 Features
 
-⚙️ How It Works
-🖐 Gesture Recognition
-Mouse Movement: Right hand's index finger moves the cursor.
+- 🎯 **Real-time Hand Gesture Recognition**
+  - Mouse movement using right-hand index finger.
+  - Left click & right click via intuitive finger gestures.
+  - Drag mode using 3 raised fingers (left hand).
+- 🔊 **Voice Typing with Speech Recognition**
+  - Speak to type text when wrists are crossed.
+- 📝 **MCQ Mode**
+  - Toggle MCQ mode and select options (A/B/C/D) based on fingers raised.
+- 🧵 **Multithreaded Voice Listening**
+  - Non-blocking voice capture for seamless performance.
 
-Clicking:
+---
 
-Left click: Right index touches left index.
+## 🧠 Tech Stack
 
-Right click: Right index touches left middle finger.
+| Tool/Library         | Purpose                              |
+|----------------------|--------------------------------------|
+| `OpenCV`             | Video capture and visualization      |
+| `MediaPipe`          | Hand landmark tracking               |
+| `PyAutoGUI`          | Mouse and keyboard automation        |
+| `SpeechRecognition`  | Convert speech to text               |
+| `NumPy`              | Distance and geometry calculations   |
+| `Threading` (Python) | Parallel voice recognition handling  |
 
-Drag Mode: Raise exactly 3 fingers on the left hand.
+---
 
-MCQ Mode: Press m to toggle. Raised fingers show option:
+## 🖥️ How It Works
 
-1 = A, 2 = B, 3 = C, 4 = D
+### 🎮 Gesture Controls
 
-🎙 Voice Typing
-Cross both hands (left wrist crosses right) to activate.
+| Action               | Gesture                                                       |
+|----------------------|---------------------------------------------------------------|
+| **Move Cursor**      | Move **right hand's index finger**                            |
+| **Left Click**       | Touch **right index** to **left index**                       |
+| **Right Click**      | Touch **right index** to **left middle finger**               |
+| **Drag Mode**        | Raise **3 fingers on left hand**                              |
+| **MCQ Mode**         | Press `m` to toggle. Use 1–4 fingers (right hand) to select A–D |
 
-Dictate into the mic; text will be typed using pyautogui.typewrite().
+### 🎙 Voice Typing
 
-🛠️ Setup Instructions
-Clone the repository
+- **Trigger**: Cross **left wrist over right wrist**.
+- **Action**: Speak, and the system types the detected sentence.
 
-bash
-Copy
-Edit
-git clone https://github.com/your-username/your-repo.git
-cd your-repo
+---
+
+## 📦 Installation
+
+### ✅ Prerequisites
+
+- Python 3.7+
+- Webcam & microphone enabled
+
+### 📥 Setup
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/gesture-voice-interface.git
+   cd gesture-voice-interface
+
+
 Install dependencies
 
-bash
-Copy
-Edit
+bash:-
 pip install opencv-python mediapipe pyautogui SpeechRecognition numpy pyaudio
-⚠️ Note: For pyaudio installation issues, refer to your OS-specific instructions.
 
-Run the script
+⚠️ On Windows, you might need:
 
-bash
-Copy
-Edit
+bash:-
+pip install pipwin
+pipwin install pyaudio
+
+Run the project
+
+bash:-
 python gesture_voice_control.py
-⌨️ Controls
-Key	Action
-m	Toggle MCQ Mode
-q	Quit the Application
 
-📌 Notes
-Ensure a good lighting environment for better hand tracking.
 
-Voice typing is sensitive to background noise. Try using a headset mic.
 
-pyautogui.FAILSAFE is disabled — move the cursor to a screen corner with caution.
+---
 
-📷 Demo (Optional)
-(Insert GIFs or YouTube demo link here showing cursor control, click gestures, voice typing, and MCQ mode in action.)
+### LICENSE : MIT 
 
-🙌 Acknowledgements
-MediaPipe by Google
-
-OpenCV
-
-PyAutoGUI
-
-SpeechRecognition
-
-📄 License
-This project is open-source and available under the MIT License.
